@@ -1,5 +1,5 @@
 # NetGuard Toolkit
-Network security CLI tool.
+Network security CLI Tool.
 Finds dangerous open ports,
 missing HTTPS headers,
 firewall misconfigurations.

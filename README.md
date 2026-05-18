@@ -1,23 +1,57 @@
-# NetGuard Toolkit
-Network security CLI Tool.
-Finds dangerous open ports,
-missing HTTPS headers,
-firewall misconfigurations.
+<div align="center">
 
-Built as foundation of CloudGuard.
-AI cloud security startup. Bengaluru.
+# NetGuard Toolkit 🛡️
+### Modular Network Security & Reconnaissance Architecture
 
-## Install
-pip install requests
+_A production-grade collection of automated defensive utilities engineered to discover cloud and network vulnerabilities._
 
-## Usage
-python netguard.py ---all
-python netguard.py ---subnet 192.168.1.0/24
-python netguard.py ---scan 127.0.0.1
-python netguard.py ---http google.com
-python netguard.py ---firewall
+[![Python](https://img.shields.io/badge/Language-Python%203-blue?style=flat-square&logo=python)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](https://opensource.org/licenses/MIT)
 
-## Built by
-Prajwal CK - Bengaluru
-Building CloudGuard startup
-github.com/prajwal18hikify
+</div>
+
+---
+
+## 🛠️ Project Overview
+**NetGuard Toolkit** is a modular security testing framework designed for rapid host assessment and vulnerability discovery. It serves as the open-source networking foundation for **CloudGuard**—an upcoming AI-powered Cloud Security Posture Management (CSPM) platform built to eliminate enterprise infrastructure misconfigurations.
+
+---
+
+## 📂 Core Utility Modules
+
+| Script Name | Runtime | Security Capability |
+| :--- | :--- | :--- |
+| `subnet_calculator.py` | Python 3.x | Algorithmic analysis of CIDR boundaries and host scopes |
+| `port_scanner.py` | Python 3.x | Multi-threaded ingress analysis targeting exposed, high-risk ports |
+| `dns_lookup.py` | Python 3.x | Automated validation of core DNS infrastructure security records |
+| `http_checker.py` | Python 3.x | Cryptographic handshake verification & HTTP security header evaluation |
+| `firewall_analyser.py` | Python 3.x | Heuristic rule-parsing engine built to detect loose access policies |
+
+---
+
+## 🔒 Security Checks Explained
+
+### 📡 Ingress Monitoring (`port_scanner.py`)
+Scans network endpoints to ensure critical management ports aren't exposed directly to the public internet:
+* **Port 22 (SSH):** Open to internet $\rightarrow$ **CRITICAL RISK**
+* **Port 3306 (MySQL):** Exposed to public $\rightarrow$ **CRITICAL RISK**
+* **Port 5432 (PostgreSQL):** Exposed to public $\rightarrow$ **CRITICAL RISK**
+
+### 🌐 Web Cryptography Auditor (`http_checker.py`)
+Analyzes target web servers for missing defensive configuration standards:
+* **HSTS Header Missing:** $\rightarrow$ **HIGH RISK** (Allows protocol downgrade attacks)
+* **X-Frame-Options Missing:** $\rightarrow$ **MEDIUM RISK** (Allows clickjacking vulnerabilities)
+* **X-Content-Type-Options Missing:** $\rightarrow$ **MEDIUM RISK** (Allows MIME-sniffing exploits)
+
+### 🧱 Policy Auditor (`firewall_analyser.py`)
+* Evaluates active ingress security rules. Flags any rule opening high-value internal networks directly to `0.0.0.0/0` as a **CRITICAL** configuration failure.
+
+---
+
+## ⚙️ Quick Start & Usage
+
+### 1. Installation
+Clone the toolkit repository directly into your environment:
+```bash
+git clone [https://github.com/Prajwal18hikify/netguard-toolkit.git](https://github.com/Prajwal18hikify/netguard-toolkit.git)
+cd netguard-toolkit

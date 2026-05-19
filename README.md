@@ -13,7 +13,7 @@ _A production-grade collection of automated defensive utilities engineered to di
 ---
 
 ## 🛠️ Project Overview
-**NetGuard Toolkit** is a modular security testing framework designed for rapid host assessment and vulnerability discovery. It serves as the open-source networking foundation for **CloudGuard**—an upcoming AI-powered Cloud Security Posture Management (CSPM) platform built to eliminate enterprise infrastructure misconfigurations.
+**NetGuard Toolkit** is a modular security testing framework designed for rapid host assessment and vulnerability discovery. It serves as the open-source networking foundation for **CloudGuard**—an upcoming AI-powered Cloud Security Posture Management (CSPM) platform built to eliminate enterprise infrastructure and misconfigurations.
 
 ---
 
